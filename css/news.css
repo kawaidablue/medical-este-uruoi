@@ -94,3 +94,15 @@
   background: var(--green);
   color: #fff;
 }
+
+
+/* newsヒーロー写真を表示（news.png）＋veilは治療ページと同じ薄さ */
+.page-hero .hero-art .ph { display: block; }
+.page-hero .hero-veil {
+  background: linear-gradient(
+    180deg,
+    rgba(245, 240, 230, 0.34) 0%,
+    rgba(245, 240, 230, 0.22) 42%,
+    rgba(238, 231, 213, 0.6) 100%
+  );
+}

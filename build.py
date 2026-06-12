@@ -157,17 +157,7 @@ def header():
       </div>
       {BRANCH}
     </div>
-    <ul class="nav-list">
-      <li><a href="index.html"><span class="jp">ホーム</span><span class="en">Home</span></a></li>
-      <li><a href="treatment-shimi.html"><span class="jp">シミ・くすみ・肝斑</span><span class="en">Mesoactis</span></a></li>
-      <li><a href="treatment-nikibi.html"><span class="jp">ニキビ</span><span class="en">Hydrogen Peeling</span></a></li>
-      <li><a href="treatment-shiwa.html"><span class="jp">しわ・たるみ</span><span class="en">SMAS-up NEO</span></a></li>
-      <li><a href="treatment-hari.html"><span class="jp">ハリ・ツヤ</span><span class="en">Environ</span></a></li>
-      <li><a href="cosmetics.html"><span class="jp">お取り扱い製品</span><span class="en">Products</span></a></li>
-      <li><a href="price.html"><span class="jp">料金表</span><span class="en">Price</span></a></li>
-      <li><a href="voice.html"><span class="jp">お客様の声</span><span class="en">Voice</span></a></li>
-      <li><a href="news.html"><span class="jp">お知らせ</span><span class="en">News</span></a></li>
-    </ul>
+    <ul class="nav-list"><li><a href="index.html"><span class="jp">ホーム</span><span class="en">Home</span></a></li><li class="nav-cat">お悩み・施術</li><li><a href="treatment-shimi.html"><span class="jp">シミ・くすみ・肝斑</span><span class="en">Mesoactis</span></a></li><li><a href="treatment-nikibi.html"><span class="jp">ニキビ</span><span class="en">Hydrogen Peeling</span></a></li><li><a href="treatment-shiwa.html"><span class="jp">しわ・たるみ</span><span class="en">SMAS-up NEO</span></a></li><li><a href="treatment-hari.html"><span class="jp">ハリ・ツヤ</span><span class="en">Environ</span></a></li><li class="nav-cat">料金・製品</li><li><a href="price.html"><span class="jp">料金表</span><span class="en">Price</span></a></li><li><a href="cosmetics.html"><span class="jp">お取り扱い製品</span><span class="en">Products</span></a></li><li class="nav-cat">サロン案内</li><li><a href="voice.html"><span class="jp">お客様の声</span><span class="en">Voice</span></a></li><li><a href="news.html"><span class="jp">お知らせ</span><span class="en">News</span></a></li><li><a href="index.html#greet"><span class="jp">代表ごあいさつ</span><span class="en">Greeting</span></a></li><li><a href="index.html#access"><span class="jp">アクセス</span><span class="en">Access</span></a></li></ul>
   </div>
 </nav>"""
 
@@ -177,7 +167,7 @@ def page_hero(mark, script, h1, lead, crumb_label, theme, motif, hero_img=None):
     return f"""<section class="page-hero">
   <div class="hero-art">{photo(hero_img,1600)}{hero_art(theme)}</div>
   <div class="hero-veil"></div>
-  <div class="wrap hero-content">
+  <div class="wrap hero-content reveal">
     <span class="script">{script}</span>
     <h1>{h1}</h1>
     <p class="lead">{lead}</p>
@@ -185,7 +175,7 @@ def page_hero(mark, script, h1, lead, crumb_label, theme, motif, hero_img=None):
 </section>"""
 
 RESERVE = """<section class="reserve" id="cta">
-  <div class="wrap">
+  <div class="wrap reveal">
     <span class="rs-script">Reservation</span>
     <h2>ご予約・お問い合わせ</h2>
     <p class="rs-lead">カウンセリングは無料です。気になることはお気軽にご相談ください。</p>
@@ -260,25 +250,25 @@ if('IntersectionObserver'in window){
 
 def page(title, body, css=None):
     # css = このページ固有のCSSファイル名（例 "voice.css"）。未指定なら共通のみ。
-    page_css = f'\n<link rel="stylesheet" href="css/{css}?v=60">' if css else ""
+    page_css = f'\n<link rel="stylesheet" href="css/{css}?v=81">' if css else ""
     return f"""<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{title}｜メディカルエステ うるおい</title>
-<link rel="icon" type="image/png" href="img/cropped-favicon.png?v=60">
+<link rel="icon" type="image/png" href="img/cropped-favicon.png?v=81">
 {FONTS}
 <script>document.documentElement.className+=" js";</script>
-<link rel="stylesheet" href="css/main.css?v=60">
-<link rel="stylesheet" href="css/sub.css?v=60">{page_css}
+<link rel="stylesheet" href="css/main.css?v=81">
+<link rel="stylesheet" href="css/sub.css?v=81">{page_css}
 </head>
 <body>
 {header()}
 {body}
 {RESERVE}
 {FOOTER}
-<script src="js/app.js?v=60"></script>
+<script src="js/app.js?v=81"></script>
 </body>
 </html>"""
 

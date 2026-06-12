@@ -34,3 +34,17 @@
 
 /* 施術内容の写真（横長の水素水ピーリング写真用）*/
 .media.wide { aspect-ratio: 16 / 11; }
+
+
+/* 治療ページはヒーロー写真を表示（teatment_top） */
+.page-hero .hero-art .ph { display: block; }
+
+/* ヒーローのveilを少しだけ弱める（画像を見せる） */
+.page-hero .hero-veil {
+  background: linear-gradient(
+    180deg,
+    rgba(245, 240, 230, 0.34) 0%,
+    rgba(245, 240, 230, 0.22) 42%,
+    rgba(238, 231, 213, 0.60) 100%
+  );
+}

@@ -185,7 +185,7 @@ body {
   grid-template-columns: 0.78fr 1.22fr;
   align-items: center;
   gap: 48px;
-  padding: 80px clamp(24px, 5vw, 56px);
+  padding: 44px clamp(24px, 5vw, 56px);
   position: relative;
 }
 .nav-side {
@@ -305,7 +305,7 @@ body {
   display: flex;
   align-items: baseline;
   gap: 20px;
-  padding: 17px 8px;
+  padding: 11px 8px;
   transition: 0.3s;
 }
 .nav-list a .n {
@@ -318,7 +318,7 @@ body {
 .nav-list a .jp {
   font-family: var(--serif-jp);
   font-weight: 600;
-  font-size: clamp(19px, 2.4vw, 23px);
+  font-size: 16px;
   color: var(--ink);
   letter-spacing: 0.08em;
   flex: 1;
@@ -368,7 +368,7 @@ body {
   }
   .nav-list a .jp {
     flex: none;
-    font-size: 19px;
+    font-size: 16px;
   }
   .nav-list a:hover {
     padding-left: 4px;
@@ -818,7 +818,6 @@ body {
   transition:
     opacity 0.9s ease,
     transform 0.9s ease;
-  animation: rv-safe2 0.01s linear 1.8s forwards;
 }
 .js .reveal.in {
   opacity: 1;
@@ -1477,3 +1476,23 @@ body {
 .page-hero .hero-art .ph {
   display: none;
 }
+
+/* メニュー11項目化に伴うスタッガー（9〜11） */
+.nav-overlay.open .nav-list li:nth-child(9) { transition-delay: 0.58s; }
+.nav-overlay.open .nav-list li:nth-child(10) { transition-delay: 0.64s; }
+.nav-overlay.open .nav-list li:nth-child(11) { transition-delay: 0.7s; }
+
+/* メニューのカテゴリ見出し */
+.nav-list li.nav-cat {
+  border-bottom: none;
+  padding: 14px 8px 4px;
+  font-family: "Shippori Mincho", serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: #6e7c4e;
+  pointer-events: none;
+}
+.nav-overlay.open .nav-list li:nth-child(12) { transition-delay: 0.76s; }
+.nav-overlay.open .nav-list li:nth-child(13) { transition-delay: 0.82s; }
+.nav-overlay.open .nav-list li:nth-child(14) { transition-delay: 0.88s; }

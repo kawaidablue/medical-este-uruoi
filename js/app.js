@@ -13,4 +13,3 @@ function rev(){
 window.addEventListener('scroll',rev,{passive:true});
 window.addEventListener('resize',rev);
 rev(); setTimeout(rev,200);
-setTimeout(()=>{for(const el of els)if(!el.__shown)shw(el);},2600);

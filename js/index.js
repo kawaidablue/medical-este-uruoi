@@ -60,5 +60,4 @@
   reveal();
   setTimeout(reveal,200);
   // 安全策：万一スクロール判定が及ばなくても一定時間後に必ず全表示
-  setTimeout(function(){ for(var k=0;k<els.length;k++){ if(!els[k].__shown) show(els[k]); } },2600);
 })();

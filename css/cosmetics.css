@@ -151,12 +151,14 @@
 }
 .product-card .pc-body .en {font-size: 18px;}
 
-/* productsヒーロー：青い水面＋製品写真にクリームveilが重なり濁って見えるため薄くする */
+/* productsヒーロー：写真を表示＋白の横グラデフィルター（左=白 → 右=透明） */
+.page-hero .hero-art .ph { display: block; }
 .page-hero .hero-veil {
+  display: block;
   background: linear-gradient(
-    180deg,
-    rgba(246, 241, 230, 0.36) 0%,
-    rgba(246, 241, 230, 0.14) 52%,
-    rgba(241, 234, 219, 0.32) 100%
+    90deg,
+    rgba(255, 255, 255, 0.45) 0%,
+    rgba(255, 255, 255, 0.18) 48%,
+    rgba(255, 255, 255, 0) 85%
   );
 }

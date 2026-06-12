@@ -222,7 +222,7 @@ header {
   position: relative;
   overflow: hidden;
   background: var(--cream);
-  height: calc(100vh - 81px);
+  height: calc(100vh - var(--header-h));
 }
 .hero .hero-bg {
   position: relative;
@@ -897,7 +897,7 @@ header {
 .greet-sign .sign-role {
   font-size: 12.5px;
   letter-spacing: 0.1em;
-  color: var(--taupe);
+  color: var(--brown-soft);
   line-height: 1.8;
 }
 .greet-sign .sign-name {
@@ -1242,7 +1242,7 @@ footer {
 
 @media (max-width: 920px) {
   .hero {
-    height: calc(100vh - 66px);
+    height: calc(100vh - var(--header-h));
     min-height: 520px;
   }
   .hero .hero-bg {
@@ -1533,7 +1533,7 @@ footer {
   grid-template-columns: 0.78fr 1.22fr;
   align-items: center;
   gap: 48px;
-  padding: 80px clamp(24px, 5vw, 56px);
+  padding: 44px clamp(24px, 5vw, 56px);
 }
 .menu-overlay .nav-side {
   position: relative;
@@ -1632,7 +1632,7 @@ footer {
   display: flex;
   align-items: baseline;
   gap: 20px;
-  padding: 17px 8px;
+  padding: 11px 8px;
   transition: 0.3s;
 }
 .menu-overlay .nav-list .n {
@@ -1646,7 +1646,7 @@ footer {
 .menu-overlay .nav-list .jp {
   font-family: var(--mincho);
   font-weight: 600;
-  font-size: clamp(19px, 2.4vw, 23px);
+  font-size: 16px;
   color: var(--brown);
   letter-spacing: 0.08em;
   flex: 1;
@@ -1746,14 +1746,12 @@ footer {
   transform:translateY(26px);
   transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1);
   will-change:opacity, transform;
-  animation:rv-safe .01s linear 1.8s forwards;
 }
 .js .pickup .pimg{
   opacity:0;
   transform:translateX(-34px) scale(.99);
   transition:opacity 1s ease, transform 1s cubic-bezier(.2,.7,.2,1);
   will-change:opacity, transform;
-  animation:rv-safe .01s linear 1.8s forwards;
 }
 .js .rv-in{ opacity:1; transform:none; animation:none; }
 .js .pickup .pimg.rv-in,
@@ -1767,3 +1765,27 @@ footer {
   }
 }
 
+
+/* メニュー11項目化に伴うスタッガー（9〜11） */
+.menu-overlay.open .nav-list li:nth-child(9) { transition-delay: 0.58s; }
+.menu-overlay.open .nav-list li:nth-child(10) { transition-delay: 0.64s; }
+.menu-overlay.open .nav-list li:nth-child(11) { transition-delay: 0.7s; }
+
+/* メニューのカテゴリ見出し */
+.nav-list li.nav-cat {
+  border-bottom: none;
+  padding: 14px 8px 4px;
+  font-family: "Shippori Mincho", serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: #6e7c4e;
+  pointer-events: none;
+}
+.menu-overlay.open .nav-list li:nth-child(12) { transition-delay: 0.76s; }
+.menu-overlay.open .nav-list li:nth-child(13) { transition-delay: 0.82s; }
+.menu-overlay.open .nav-list li:nth-child(14) { transition-delay: 0.88s; }
+
+/* ヘッダー高さ変数：ヒーロー(100vh)をヘッダー込みで収める */
+:root { --header-h: 86px; }
+@media (max-width: 900px) { :root { --header-h: 66px; } }

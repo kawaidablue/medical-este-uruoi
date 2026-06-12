@@ -41,6 +41,9 @@ p{font-weight:500}
   .hd-right{gap:8px}
   .hd-cta{font-size:10px;letter-spacing:.06em;padding:9px 14px}
 }
+@media (max-width:400px){
+  .hd-cta{display:none}
+}
 
 /* ===== LINEで相談するボタンの公式アイコン ===== */
 .btn-line-app .line-ico{

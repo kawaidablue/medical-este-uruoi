@@ -1,0 +1,4 @@
+/* ===== treatment-hari.css : treatment-hari.html 固有スタイル（共通は sub.css）===== */
+
+/* 施術内容の写真（横長のクールビタミントリートメント写真用）*/
+.media.wide { aspect-ratio: 16 / 11; }

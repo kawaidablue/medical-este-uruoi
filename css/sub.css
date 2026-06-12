@@ -1,3 +1,4 @@
+html { overflow-x: clip; }
 /* =========================================================
    sub.css — 下層ページ共通スタイル（2ページ以上で使用）
    ページ固有スタイルは各 {ページ名}.css に分離。
@@ -35,12 +36,12 @@ body {
   font-weight: 500;
   letter-spacing: 0.04em;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 .wrap {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 0 28px;
+  padding: 0 20px;
 }
 .narrow {
   max-width: 920px;
@@ -1255,7 +1256,7 @@ body {
   }
   .feature-grid,
   .related-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
   .foot-grid {
     grid-template-columns: 1fr 1fr;
@@ -1496,3 +1497,113 @@ body {
 .nav-overlay.open .nav-list li:nth-child(12) { transition-delay: 0.76s; }
 .nav-overlay.open .nav-list li:nth-child(13) { transition-delay: 0.82s; }
 .nav-overlay.open .nav-list li:nth-child(14) { transition-delay: 0.88s; }
+
+/* SP: 15.5px → 14px */
+@media (max-width: 768px) {
+  .fstep-body p { font-size: 14px; }
+  .type-row p { font-size: 14px; }
+  .vlead { font-size: 14px; }
+  .qaitem .a { font-size: 14px; }
+  .menu-table .mn { font-size: 14px; }
+  .qaitem .a { padding-left: 0; }
+}
+
+/* ===== 下層ヒーロー：1080px以下は比率を固定（画像の見え方を一定に保つ） ===== */
+@media (max-width: 1080px) {
+  .page-hero {
+    aspect-ratio: 16 / 7;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .page-hero .hero-content {
+    width: 100%;
+  }
+  .page-hero .mark {
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* ===== SP：ヘッダーをヒーローに被せない（通常フロー）＋ヒーロー比率は縦長め ===== */
+@media (max-width: 768px) {
+  .site-header {
+    position: sticky;
+    top: 0;
+  }
+  .page-hero {
+    aspect-ratio: 3 / 2;
+  }
+  .page-hero .mark {
+    font-size: clamp(38px, 12vw, 66px);
+  }
+  /* SP：本文p（16.5px）は14pxに */
+  .wrap p,
+  .page-hero .lead,
+  .proseblock {
+    font-size: 14px;
+  }
+
+  /* SP：ハンバーガーメニューの中身を100vhに収める */
+  .nav-grid {
+    min-height: 0;
+    gap: 12px;
+    padding: 46px 24px 18px;
+    align-content: start;
+  }
+  /* 連絡先は1行に集約（TEL左・SNS右。ロゴ/コンセプト/営業時間/住所は省略） */
+  .nav-side {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .nav-side .nav-logo,
+  .nav-side .nav-concept,
+  .nav-side .nav-addr,
+  .nav-side .nav-hours,
+  .nav-side .nav-tel-l {
+    display: none;
+  }
+  .nav-side .nav-tel {
+    font-size: 20px;
+    margin: 0;
+  }
+  .nav-side .nav-sns {
+    margin-top: 0;
+    gap: 10px;
+  }
+  .nav-side .nav-sns a {
+    width: 38px;
+    height: 38px;
+  }
+  .nav-side .nav-sns a svg {
+    width: 19px;
+    height: 19px;
+  }
+  /* メニュー項目は1行コンパクト（jp左・en右） */
+  .nav-list a {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+    padding: 5px 4px;
+  }
+  .nav-list a .jp {
+    order: 0;
+    font-size: 14.5px;
+  }
+  .nav-list a .en {
+    order: 0;
+    font-size: 11px;
+  }
+  .nav-list li.nav-cat {
+    padding: 6px 4px 2px;
+    font-size: 11px;
+  }
+}
+
+
+

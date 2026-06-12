@@ -48,3 +48,9 @@
     rgba(238, 231, 213, 0.60) 100%
   );
 }
+
+/* SP: 15.5px → 14px */
+@media (max-width: 768px) {
+  .topic-part h4 { font-size: 14px; }
+  .topic-part p { font-size: 14px; }
+}

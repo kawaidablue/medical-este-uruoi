@@ -250,25 +250,25 @@ if('IntersectionObserver'in window){
 
 def page(title, body, css=None):
     # css = このページ固有のCSSファイル名（例 "voice.css"）。未指定なら共通のみ。
-    page_css = f'\n<link rel="stylesheet" href="css/{css}?v=83">' if css else ""
+    page_css = f'\n<link rel="stylesheet" href="css/{css}?v=104">' if css else ""
     return f"""<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{title}｜メディカルエステ うるおい</title>
-<link rel="icon" type="image/png" href="img/cropped-favicon.png?v=83">
+<link rel="icon" type="image/png" href="img/cropped-favicon.png?v=104">
 {FONTS}
 <script>document.documentElement.className+=" js";</script>
-<link rel="stylesheet" href="css/main.css?v=83">
-<link rel="stylesheet" href="css/sub.css?v=83">{page_css}
+<link rel="stylesheet" href="css/main.css?v=104">
+<link rel="stylesheet" href="css/sub.css?v=104">{page_css}
 </head>
 <body>
 {header()}
 {body}
 {RESERVE}
 {FOOTER}
-<script src="js/app.js?v=83"></script>
+<script src="js/app.js?v=104"></script>
 </body>
 </html>"""
 
@@ -585,7 +585,7 @@ shimi = dict(
         ("トータルアンチエイジングコース","¥20,000","（税込 ¥22,000）"),
       ],
     ),
-    price_note="※ 価格は税抜表示（カッコ内は税込）。※ 完全予約制・初回カウンセリング無料。",
+    price_note="※ 完全予約制・初回カウンセリング無料。",
     faq=[
       ("しみが気になっているが、どれくらいのペースで通えば良いですか？","個人差がございますが、2〜3週間に1度のペースで5〜6回通うことをおすすめしています。その後はお肌の状態に合わせて通うことをおすすめしています。"),
       ("施術後のお肌の状態は？","皆さん、化粧水が浸透するのを実感されています。"),
@@ -648,7 +648,7 @@ nikibi = dict(
         ("水素水ピーリング ＋ ポレーション／イオン導入（背中全体）","¥26,000","（税込 ¥28,600）"),
       ],
     ),
-    price_note="※ 価格は税抜表示（カッコ内は税込）。※ 完全予約制・初回カウンセリング無料。",
+    price_note="※ 完全予約制・初回カウンセリング無料。",
     faq=[
       ("水素水ピーリングはどのような効果が期待できますか？","ニキビ、吹き出物などの肌トラブルの改善に期待ができます。"),
       ("水素水ピーリングは痛いですか？","ジェットの刺激はとても気持ち良く、痛みはほとんど伴いません。"),
@@ -710,7 +710,7 @@ shiwa = dict(
         ("全顔","¥40,000","（税込 ¥44,000）"),
       ],
     ),
-    price_note="※ 各種コースもございます。詳しくはお問い合わせください。※ 価格は税抜表示（カッコ内は税込）。完全予約制・初回カウンセリング無料。",
+    price_note="※ 各種コースもございます。詳しくはお問い合わせください。完全予約制・初回カウンセリング無料。",
     faq=[
       ("どんな効果がありますか？","輪郭形成やフェイスリフティング、筋肉の引き締め、デトックス作用、スキンタイトニングが見込めます。"),
       ("痛みはありますか？","RFによる熱と電気刺激を感じます。RFは施術部位全体がぽかぽかと温かくなり、電気刺激は多少の違和感を感じることがあります。基本的には痛みを感じにくいマイルドな施術です。"),
@@ -760,7 +760,7 @@ hari = dict(
         ("ポリッシングトリートメント（オイル＋クレイ）","+¥3,000","（税込 ¥3,300）"),
       ],
     ),
-    price_note="※ 価格は税抜表示（カッコ内は税込）。※ オプションは組み合わせ自由です。※ 完全予約制・初回カウンセリング無料。",
+    price_note="※ オプションは組み合わせ自由です。※ 完全予約制・初回カウンセリング無料。",
     faq=[
       ("ビタミンAは肌に良いのですか？","ビタミンAは皮膚の健康維持に欠かせない成分です。紫外線やフリーラジカルなどの影響でダメージを受けた皮膚は補修されにくく、受けてしまったダメージを補修するには、できる限り高濃度のビタミンAを蓄えることが重要です。"),
       ("ビタミンAはお肌に刺激などありますか？","ビタミンAを使用した際に「レチノイド反応」と呼ばれる反応をおこす可能性があります。主な症状は赤み・ほてり・腫れ・かゆみ（むずむずする）・乾燥（角質の落屑）・ニキビや吹き出物の一時的な活発化などです。アレルギー反応でも毒性反応でもないため、使い続けることで肌のビタミンAを受け入れるシステムが補修され、反応は落ち着きます。"),
@@ -885,7 +885,7 @@ _PNAV = "".join(f'<a href="#{a}">{j}</a>' for a,j in [
   ("price-shimi","シミ・肝斑"),("price-nikibi","ニキビ"),("price-shiwa","しわ・たるみ"),("price-hari","ハリ・ツヤ")])
 
 price_body = f"""
-{page_hero("PRICE","Price","料金表","施術メニューと料金のご案内です。価格は税抜表示（カッコ内は税込）・完全予約制となっております。","料金表","price","botanical","te_pickup")}
+{page_hero("PRICE","Price","料金表","施術メニューと料金のご案内です。完全予約制となっております。","料金表","price","botanical","te_pickup")}
 <section class="section cream">
   <div class="wrap narrow">
     <div class="price-nav reveal">{_PNAV}</div>
@@ -915,7 +915,7 @@ price_body = f"""
        ("フォーカスオン エヴァネッセント（部分）","+¥4,000","（税込 ¥4,400）"),
        ("ラックトリートメント（AHA・全顔）","+¥5,000","（税込 ¥5,500）"),
        ("ポリッシングトリートメント（オイル＋クレイ）","+¥3,000","（税込 ¥3,300）")])}
-    <p class="price-note">※ 価格は税抜表示（カッコ内は税込）です。<br>※ 完全予約制となります。初回はカウンセリング無料です。<br>※ 各種コース・お得なキャンペーンの詳細はカウンセリング時にご案内いたします。<br>※ 肌トラブルのご相談は、提携「うるおい皮ふ科クリニック」院長へ直接おつなぎいたします。</p>
+    <p class="price-note">※ 完全予約制となります。初回はカウンセリング無料です。<br>※ 各種コース・お得なキャンペーンの詳細はカウンセリング時にご案内いたします。<br>※ 肌トラブルのご相談は、提携「うるおい皮ふ科クリニック」院長へ直接おつなぎいたします。</p>
   </div>
 </section>
 <section class="cta-banner"><div class="wrap reveal">
@@ -959,7 +959,7 @@ denba_pc = ('<div class="product-card reveal"><div class="media wide art">'
             '<div class="pc-body"><h4>DENBA Health</h4>'
             '<p>特殊な電界技術で、体の内側からめぐりとコンディションをサポートする健康機器。ご自宅でのリラックスタイムにお使いいただけます。サロンでもご体感いただけますので、お気軽にお問い合わせください。</p></div></div>')
 cos_body = f"""
-{page_hero("PRODUCTS","Products","お取り扱い製品","化粧品・健康機器など、お取り扱い製品のご案内です。価格は税抜表示（カッコ内は税込）。","化粧品","cosmetics","cosmetics","serum")}
+{page_hero("PRODUCTS","Products","お取り扱い製品","化粧品・健康機器など、お取り扱い製品のご案内です。","化粧品","cosmetics","cosmetics","serum")}
 <section class="section cream">
   <div class="wrap">
     <h3 class="brand-head">エンビロン<span class="en">ENVIRON</span></h3>
@@ -1002,7 +1002,7 @@ cos_body = f"""
       <span class="ph-rule"></span>
     </div>
     <div class="product-grid">{uruoi_pc}</div>
-    <p class="price-note" style="margin-top:26px">※ 価格は税抜表示（カッコ内は税込）です。※ 取り扱い製品・在庫の詳細はお問い合わせください。</p>
+    <p class="price-note" style="margin-top:26px">※ 取り扱い製品・在庫の詳細はお問い合わせください。</p>
   </div>
 </section>
 <section class="cta-banner"><div class="wrap reveal">

@@ -250,25 +250,25 @@ if('IntersectionObserver'in window){
 
 def page(title, body, css=None):
     # css = このページ固有のCSSファイル名（例 "voice.css"）。未指定なら共通のみ。
-    page_css = f'\n<link rel="stylesheet" href="css/{css}?v=104">' if css else ""
+    page_css = f'\n<link rel="stylesheet" href="css/{css}?v=109">' if css else ""
     return f"""<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{title}｜メディカルエステ うるおい</title>
-<link rel="icon" type="image/png" href="img/cropped-favicon.png?v=104">
+<link rel="icon" type="image/png" href="img/cropped-favicon.png?v=109">
 {FONTS}
 <script>document.documentElement.className+=" js";</script>
-<link rel="stylesheet" href="css/main.css?v=104">
-<link rel="stylesheet" href="css/sub.css?v=104">{page_css}
+<link rel="stylesheet" href="css/main.css?v=109">
+<link rel="stylesheet" href="css/sub.css?v=109">{page_css}
 </head>
 <body>
 {header()}
 {body}
 {RESERVE}
 {FOOTER}
-<script src="js/app.js?v=104"></script>
+<script src="js/app.js?v=109"></script>
 </body>
 </html>"""
 

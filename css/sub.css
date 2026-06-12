@@ -1603,7 +1603,29 @@ body {
     padding: 6px 4px 2px;
     font-size: 11px;
   }
+
+  /* SP：初回トライアル価格カードは縦積み（横並びのカラム落ち防止） */
+  .price-first {
+    padding: 22px 18px;
+  }
+  .price-first .was2 {
+    display: block;
+    margin: 0 0 4px;
+    font-size: 14px;
+  }
+  .price-first .amt {
+    display: block;
+    font-size: 28px;
+    word-break: keep-all;
+  }
 }
 
 
 
+
+/* 全体：SPでは p の最大サイズを14pxにキャップ（それ以外は不変） */
+@media (max-width: 768px) {
+  p {
+    font-size: 14px !important;
+  }
+}

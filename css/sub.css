@@ -1597,8 +1597,8 @@ body {
   .nav-side {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 16px;
+    justify-content: center;
+    gap: 22px;
   }
   .nav-side .nav-logo,
   .nav-side .nav-concept,

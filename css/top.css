@@ -1299,6 +1299,7 @@ footer {
   }
   .ft > div:first-child .logo-img {
     height: 46px;
+    display: inline-block;
   }
   .copyright {
     margin-top: 28px;

@@ -1705,3 +1705,31 @@ body {
   .burger .circle i { width: 26px; }
   .nav-overlay .close { font-size: 26px; }
 }
+
+/* SP：下層footerをtop(.ft)に合わせる（ブランド全幅中央＋リンク2×2） */
+@media (max-width: 768px) {
+  .foot-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 24px;
+  }
+  .foot-grid > .foot-col {
+    min-width: 0;
+  }
+  .foot-brand {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding-bottom: 26px;
+    border-bottom: 1px solid var(--beige-dk);
+  }
+  .foot-brand .foot-logo {
+    display: inline-block;
+    height: 46px;
+    margin-bottom: 12px;
+  }
+}
+@media (max-width: 380px) {
+  .foot-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}

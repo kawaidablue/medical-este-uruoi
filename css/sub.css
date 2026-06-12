@@ -1673,7 +1673,10 @@ body {
 }
 @media (max-width: 768px) {
   .sec-head .ttl {
-    font-size: 24px;
+    font-size: 20px;
+  }
+  .sec-head {
+    margin-bottom: 25px;
   }
   .page-hero .lead {
     font-size: 12px !important;
@@ -1681,4 +1684,24 @@ body {
   .sp-br {
     display: inline;
   }
+}
+
+/* SP極小（380px以下）：関連カードは1列 */
+@media (max-width: 380px) {
+  .feature-grid,
+  .related-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* SP：コピーライト10px */
+@media (max-width: 768px) {
+  .foot-bottom { font-size: 10px !important; }
+}
+
+/* SP：ハンバーガー3本線・閉じる×を小さく */
+@media (max-width: 768px) {
+  .burger .circle { gap: 5px; }
+  .burger .circle i { width: 26px; }
+  .nav-overlay .close { font-size: 26px; }
 }

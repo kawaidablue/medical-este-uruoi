@@ -2042,3 +2042,22 @@ footer {
 @media (max-width: 768px) {
   .info-list { font-size: 14px; }
 }
+
+/* SP：ごあいさつ透かしの位置を下げる */
+@media (max-width: 768px) {
+  .greet .wm {
+    top: 80px;
+  }
+}
+
+/* SP：コピーライト10px */
+@media (max-width: 768px) {
+  .copyright { font-size: 10px; }
+}
+
+/* SP：ハンバーガー3本線・閉じる×を小さく */
+@media (max-width: 768px) {
+  .burger .circle { gap: 5px; }
+  .burger .circle i { width: 26px; }
+  .menu-overlay .close { font-size: 26px; }
+}

@@ -76,7 +76,8 @@
     gap: 14px;
   }
   .feat-plus {
-    display: none;
+    text-align: center;
+    font-size: 22px;
   }
 }
 

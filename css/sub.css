@@ -1,4 +1,6 @@
-html { overflow-x: clip; }
+html {
+  overflow-x: clip;
+}
 /* =========================================================
    sub.css — 下層ページ共通スタイル（2ページ以上で使用）
    ページ固有スタイルは各 {ページ名}.css に分離。
@@ -448,7 +450,7 @@ body {
   font-family: var(--serif-jp);
   font-weight: 600;
   color: var(--ink);
-  font-size: clamp(28px, 4.4vw, 42px);
+  font-size: clamp(21px, 4.4vw, 42px);
   letter-spacing: 0.16em;
   margin-bottom: 18px;
 }
@@ -823,9 +825,21 @@ body {
 .js .reveal.in {
   opacity: 1;
   transform: none;
+  -webkit-animation: none;
   animation: none;
 }
-@keyframes rv-safe2 { to { opacity: 1; transform: none; } }
+@-webkit-keyframes rv-safe2 {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes rv-safe2 {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   .js .reveal {
     opacity: 1;
@@ -1479,9 +1493,15 @@ body {
 }
 
 /* メニュー11項目化に伴うスタッガー（9〜11） */
-.nav-overlay.open .nav-list li:nth-child(9) { transition-delay: 0.58s; }
-.nav-overlay.open .nav-list li:nth-child(10) { transition-delay: 0.64s; }
-.nav-overlay.open .nav-list li:nth-child(11) { transition-delay: 0.7s; }
+.nav-overlay.open .nav-list li:nth-child(9) {
+  transition-delay: 0.58s;
+}
+.nav-overlay.open .nav-list li:nth-child(10) {
+  transition-delay: 0.64s;
+}
+.nav-overlay.open .nav-list li:nth-child(11) {
+  transition-delay: 0.7s;
+}
 
 /* メニューのカテゴリ見出し */
 .nav-list li.nav-cat {
@@ -1494,18 +1514,36 @@ body {
   color: #6e7c4e;
   pointer-events: none;
 }
-.nav-overlay.open .nav-list li:nth-child(12) { transition-delay: 0.76s; }
-.nav-overlay.open .nav-list li:nth-child(13) { transition-delay: 0.82s; }
-.nav-overlay.open .nav-list li:nth-child(14) { transition-delay: 0.88s; }
+.nav-overlay.open .nav-list li:nth-child(12) {
+  transition-delay: 0.76s;
+}
+.nav-overlay.open .nav-list li:nth-child(13) {
+  transition-delay: 0.82s;
+}
+.nav-overlay.open .nav-list li:nth-child(14) {
+  transition-delay: 0.88s;
+}
 
 /* SP: 15.5px → 14px */
 @media (max-width: 768px) {
-  .fstep-body p { font-size: 14px; }
-  .type-row p { font-size: 14px; }
-  .vlead { font-size: 14px; }
-  .qaitem .a { font-size: 14px; }
-  .menu-table .mn { font-size: 14px; }
-  .qaitem .a { padding-left: 0; }
+  .fstep-body p {
+    font-size: 14px;
+  }
+  .type-row p {
+    font-size: 14px;
+  }
+  .vlead {
+    font-size: 14px;
+  }
+  .qaitem .a {
+    font-size: 14px;
+  }
+  .menu-table .mn {
+    font-size: 14px;
+  }
+  .qaitem .a {
+    padding-left: 0;
+  }
 }
 
 /* ===== 下層ヒーロー：1080px以下は比率を固定（画像の見え方を一定に保つ） ===== */
@@ -1520,6 +1558,7 @@ body {
   }
   .page-hero .hero-content {
     width: 100%;
+    padding: 0;
   }
   .page-hero .mark {
     top: 50%;
@@ -1530,6 +1569,7 @@ body {
 /* ===== SP：ヘッダーをヒーローに被せない（通常フロー）＋ヒーロー比率は縦長め ===== */
 @media (max-width: 768px) {
   .site-header {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
   }
@@ -1620,9 +1660,6 @@ body {
   }
 }
 
-
-
-
 /* 全体：SPでは p の最大サイズを14pxにキャップ（それ以外は不変） */
 @media (max-width: 768px) {
   p {
@@ -1631,9 +1668,17 @@ body {
 }
 
 /* SP個別調整：sec-head見出し24px・leadは12px・SP専用改行 */
-.sp-br { display: none; }
+.sp-br {
+  display: none;
+}
 @media (max-width: 768px) {
-  .sec-head .ttl { font-size: 24px; }
-  .page-hero .lead { font-size: 12px !important; }
-  .sp-br { display: inline; }
+  .sec-head .ttl {
+    font-size: 24px;
+  }
+  .page-hero .lead {
+    font-size: 12px !important;
+  }
+  .sp-br {
+    display: inline;
+  }
 }

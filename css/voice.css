@@ -59,3 +59,10 @@
     rgba(238, 231, 213, 0.6) 100%
   );
 }
+
+/* SP：お客様の声は1列（sub.cssより後に読まれるためここで上書き） */
+@media (max-width: 768px) {
+  .voice-grid {
+    grid-template-columns: 1fr;
+  }
+}

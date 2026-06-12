@@ -145,7 +145,7 @@ def header():
   <button class="close" id="navClose" aria-label="閉じる"><svg class="x-ico" width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 3 31 31M31 3 3 31"/></svg></button>
   <div class="nav-grid">
     <div class="nav-side">
-      <img class="nav-logo" src="{LOGO}" alt="メディカルエステ うるおい">
+      <a href="index.html"><img class="nav-logo" src="{LOGO}" alt="メディカルエステ うるおい"></a>
       <p class="nav-concept">皮膚科専門医監修の<br>メディカルエステサロン</p>
       <p class="nav-tel-l">ご予約・お問い合わせ</p>
       <a class="nav-tel" href="tel:0477122552">047-712-2552</a>
@@ -201,8 +201,8 @@ RESERVE = """<section class="reserve" id="cta">
 FOOTER = f"""<footer class="site-footer">
   <div class="wrap foot-grid">
     <div class="foot-brand">
-      <img class="logo-img foot-logo" src="{LOGO}" alt="メディカルエステ うるおい">
-      <address>千葉県松戸市日暮3-10-2<br>グレースビア参番館103号<br>完全予約制 ／ カウンセリング無料</address>
+      <a href="index.html"><img class="logo-img foot-logo" src="{LOGO}" alt="メディカルエステ うるおい"></a>
+      <address>千葉県松戸市日暮3-10-2<br>グレースビア参番館103号<br>完全予約制 ／ <span style="white-space:nowrap">カウンセリング無料</span></address>
     </div>
     <div class="foot-col">
       <h5><a href="index.html">HOME</a></h5>
@@ -250,25 +250,25 @@ if('IntersectionObserver'in window){
 
 def page(title, body, css=None):
     # css = このページ固有のCSSファイル名（例 "voice.css"）。未指定なら共通のみ。
-    page_css = f'\n<link rel="stylesheet" href="css/{css}?v=81">' if css else ""
+    page_css = f'\n<link rel="stylesheet" href="css/{css}?v=83">' if css else ""
     return f"""<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{title}｜メディカルエステ うるおい</title>
-<link rel="icon" type="image/png" href="img/cropped-favicon.png?v=81">
+<link rel="icon" type="image/png" href="img/cropped-favicon.png?v=83">
 {FONTS}
 <script>document.documentElement.className+=" js";</script>
-<link rel="stylesheet" href="css/main.css?v=81">
-<link rel="stylesheet" href="css/sub.css?v=81">{page_css}
+<link rel="stylesheet" href="css/main.css?v=83">
+<link rel="stylesheet" href="css/sub.css?v=83">{page_css}
 </head>
 <body>
 {header()}
 {body}
 {RESERVE}
 {FOOTER}
-<script src="js/app.js?v=81"></script>
+<script src="js/app.js?v=83"></script>
 </body>
 </html>"""
 

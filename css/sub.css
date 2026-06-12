@@ -1629,3 +1629,11 @@ body {
     font-size: 14px !important;
   }
 }
+
+/* SP個別調整：sec-head見出し24px・leadは12px・SP専用改行 */
+.sp-br { display: none; }
+@media (max-width: 768px) {
+  .sec-head .ttl { font-size: 24px; }
+  .page-hero .lead { font-size: 12px !important; }
+  .sp-br { display: inline; }
+}

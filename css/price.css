@@ -148,3 +148,20 @@
     rgba(238, 231, 213, 0.6) 100%
   );
 }
+
+/* SP：初回トライアル価格カードは金額を縦行・縮小して収める */
+@media (max-width: 768px) {
+  .pl-first {
+    padding: 16px 18px;
+    gap: 8px;
+  }
+  .pl-first .pl-first-nm {
+    min-width: 0;
+  }
+  .pl-first .pl-first-amt {
+    flex-basis: 100%;
+    font-size: 21px;
+    white-space: normal;
+    word-break: keep-all;
+  }
+}

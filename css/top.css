@@ -1994,6 +1994,7 @@ footer {
   .treat-row {
     display: flex;
     flex-direction: column;
+    align-items: stretch;
     position: relative;
     gap: 14px;
   }
@@ -2008,6 +2009,7 @@ footer {
   .treat-row:nth-child(even) .pic {
     order: 2;
     margin: 0;
+    width: 100%;
   }
   .treat-row p {
     order: 3;
@@ -2029,4 +2031,14 @@ footer {
   p {
     font-size: 14px !important;
   }
+}
+
+/* SP：lead は12px */
+@media (max-width: 768px) {
+  .lead { font-size: 12px !important; }
+}
+
+/* SP：アクセスの情報divは14px */
+@media (max-width: 768px) {
+  .info-list { font-size: 14px; }
 }

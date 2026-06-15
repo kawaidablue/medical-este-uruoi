@@ -462,6 +462,8 @@ p {
 }
 .foot-col h5 a {
   color: inherit;
+  display: inline;
+  padding: 0;
 }
 .foot-col h5 a:hover {
   color: var(--green-dk);

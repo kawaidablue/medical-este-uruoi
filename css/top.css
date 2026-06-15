@@ -1411,7 +1411,8 @@ footer {
 .rs-sns {
   display: flex;
   gap: 12px;
-  justify-content: center;
+  justify-content: flex-start;
+  align-self: flex-start;
   margin-top: 8px;
 }
 .rs-sns a {
@@ -1468,17 +1469,16 @@ footer {
     align-items: center;
   }
 }
-/* 400px以下：ボタンは全幅に戻し横余白を詰めて長い文言の折り返しを防ぐ */
+/* 400px以下：中央揃えのまま、文字を詰めて1行に収める（折り返し防止） */
 @media (max-width: 420px) {
   .rs-card .rs-act {
-    align-items: stretch;
-    padding-left: 16px;
-    padding-right: 16px;
+    align-items: center;
   }
   .rs-card .rs-act .btn {
-    padding-left: 14px;
-    padding-right: 14px;
-    letter-spacing: 0.06em;
+    padding: 15px 16px;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
   }
 }
 .btn-line-app {
@@ -1608,8 +1608,12 @@ footer {
 
 /* SP: 15.5px → 14px */
 @media (max-width: 768px) {
-  .concept .ctext .msg { font-size: 14px; }
-  .treat-row p { font-size: 14px; }
+  .concept .ctext .msg {
+    font-size: 14px;
+  }
+  .treat-row p {
+    font-size: 14px;
+  }
 }
 
 /* 施術内容：920px以下は2列カードグリッド（h3 → 写真 → p の順） */
@@ -1675,12 +1679,16 @@ footer {
 
 /* SP：lead は12px */
 @media (max-width: 768px) {
-  .lead { font-size: 12px !important; }
+  .lead {
+    font-size: 12px !important;
+  }
 }
 
 /* SP：アクセスの情報divは14px */
 @media (max-width: 768px) {
-  .info-list { font-size: 14px; }
+  .info-list {
+    font-size: 14px;
+  }
 }
 
 /* SP：ごあいさつ透かしの位置を下げる */

@@ -403,6 +403,30 @@ body {
   color: var(--ink-soft);
   margin: 18px 0 0;
 }
+/* クレジットカードブランド（ロゴ画像が入るまでの暫定バッジ表示） */
+.card-brands {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px 14px;
+  padding: 0;
+  margin: 0;
+}
+.card-brands li {
+  font-family: "Cormorant Garamond", var(--sans-jp), sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--line-soft);
+  border-radius: 6px;
+  padding: 10px 16px;
+  min-width: 70px;
+  text-align: center;
+}
 @media (max-width: 560px) {
   .cause-box {
     padding: 24px 22px;
@@ -596,7 +620,8 @@ body {
 .rs-sns {
   display: flex;
   gap: 12px;
-  justify-content: center;
+  justify-content: flex-start;
+  align-self: flex-start;
   margin-top: 8px;
 }
 .rs-sns a {
@@ -656,17 +681,16 @@ body {
     align-items: center;
   }
 }
-/* 400px以下：ボタンは全幅に戻し横余白を詰めて長い文言の折り返しを防ぐ */
+/* 400px以下：中央揃えのまま、文字を詰めて1行に収める（折り返し防止） */
 @media (max-width: 420px) {
   .rs-card .rs-act {
-    align-items: stretch;
-    padding-left: 16px;
-    padding-right: 16px;
+    align-items: center;
   }
   .rs-card .rs-act .btn {
-    padding-left: 14px;
-    padding-right: 14px;
-    letter-spacing: 0.06em;
+    padding: 15px 16px;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
   }
 }
 .js .reveal {

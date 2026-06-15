@@ -95,9 +95,10 @@
   color: #fff;
 }
 
-
 /* newsヒーロー写真を表示（news.png）＋veilは治療ページと同じ薄さ */
-.page-hero .hero-art .ph { display: block; }
+.page-hero .hero-art .ph {
+  display: block;
+}
 .page-hero .hero-veil {
   background: linear-gradient(
     180deg,
@@ -109,6 +110,10 @@
 
 /* SP: 15.5px → 14px */
 @media (max-width: 768px) {
-  .ntitle { font-size: 14px; }
-  .nbody p { font-size: 14px; }
+  .ntitle {
+    font-size: 14px;
+  }
+  .nbody p {
+    font-size: 14px;
+  }
 }

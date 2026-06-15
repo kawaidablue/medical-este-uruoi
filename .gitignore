@@ -4,3 +4,7 @@
 *.log
 *.psd
 *.psb
+
+# 動画は圧縮版のみ追跡（元データは大容量のため除外）
+video/*
+!video/neo-voir-mini.mp4

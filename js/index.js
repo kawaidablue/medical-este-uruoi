@@ -1,3 +1,14 @@
+/* ハンバーガーメニュー開閉（全ページ共通仕様） */
+(function(){
+  var mb=document.getElementById('menuBtn'),nv=document.getElementById('navOverlay'),nc=document.getElementById('navClose');
+  if(!mb||!nv) return;
+  var openNav=function(){nv.classList.add('open');document.body.style.overflow='hidden';};
+  var closeNav=function(){nv.classList.remove('open');document.body.style.overflow='';};
+  mb.addEventListener('click',openNav);
+  if(nc)nc.addEventListener('click',closeNav);
+  nv.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeNav);});
+})();
+
 (function(){
   var track=document.getElementById('track'); if(!track) return;
   var GAP=24;
@@ -9,7 +20,7 @@
   post.forEach(function(n){track.appendChild(n);});
   var cards=Array.prototype.slice.call(track.children);
   var idx=LEN, cardW=0, busy=false;
-  function visible(){var w=track.parentElement.clientWidth; return w>=1000?4 : w>=640?2 : 1;}
+  function visible(){var w=track.parentElement.clientWidth; return w>=1000?4 : w>=540?2 : 1;}
   function size(){
     var vp=track.parentElement.clientWidth; var V=visible();
     cardW=(vp-GAP*(V-1))/V;

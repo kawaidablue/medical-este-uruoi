@@ -656,6 +656,19 @@ body {
     align-items: center;
   }
 }
+/* 400px以下：ボタンは全幅に戻し横余白を詰めて長い文言の折り返しを防ぐ */
+@media (max-width: 420px) {
+  .rs-card .rs-act {
+    align-items: stretch;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .rs-card .rs-act .btn {
+    padding-left: 14px;
+    padding-right: 14px;
+    letter-spacing: 0.06em;
+  }
+}
 .js .reveal {
   opacity: 0;
   transform: translateY(22px);

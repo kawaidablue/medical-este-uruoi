@@ -13,3 +13,16 @@ function rev(){
 window.addEventListener('scroll',rev,{passive:true});
 window.addEventListener('resize',rev);
 rev(); setTimeout(rev,200);
+
+/* SP：フッターのリンク列アコーディオン開閉 */
+(function(){
+  var heads = document.querySelectorAll(".site-footer .foot-col.foot-acc h5");
+  if(!heads.length) return;
+  heads.forEach(function(h){
+    h.addEventListener("click", function(e){
+      if(window.innerWidth > 640) return;
+      e.preventDefault();
+      h.parentElement.classList.toggle("is-open");
+    });
+  });
+})();

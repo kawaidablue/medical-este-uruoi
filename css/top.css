@@ -1696,4 +1696,7 @@ footer {
   .greet .wm {
     top: 80px;
   }
+  .concept .ctext h2 {
+    font-size: 28px;
+  }
 }

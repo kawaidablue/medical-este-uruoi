@@ -1133,6 +1133,9 @@ body {
     grid-template-columns: 1fr;
     max-width: 460px;
   }
+  .video h4 {
+    font-size: 12px;
+  }
   .bullets {
     -moz-columns: 1;
     columns: 1;

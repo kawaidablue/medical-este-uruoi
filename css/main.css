@@ -319,6 +319,15 @@ p {
   opacity: 0.45;
   pointer-events: none;
 }
+/* SP専用改行（全ページ共通） */
+.sp-br {
+  display: none;
+}
+@media (max-width: 768px) {
+  .sp-br {
+    display: inline;
+  }
+}
 /* SP：Instagramはスマホで非表示（PCのみ表示） */
 @media (max-width: 768px) {
   .nav-sns a[aria-label="Instagram"],
@@ -337,6 +346,7 @@ p {
 }
 .nav-side .nav-cta .btn {
   width: 100%;
+  justify-content: center;
 }
 .nav-list {
   list-style: none;

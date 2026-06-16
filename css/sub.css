@@ -320,6 +320,8 @@ body {
   padding: 34px 36px;
   box-shadow: var(--shadow-sm);
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .voice-card .quote {
   font-family: var(--serif-en);
@@ -337,7 +339,7 @@ body {
   line-height: 2.05;
 }
 .voice-card .meta {
-  margin-top: 20px;
+  margin-top: auto;
   padding-top: 16px;
   border-top: 1px solid var(--line-soft);
   font-family: var(--sans-jp);
@@ -402,30 +404,6 @@ body {
   font-size: 13px;
   color: var(--ink-soft);
   margin: 18px 0 0;
-}
-/* クレジットカードブランド（ロゴ画像が入るまでの暫定バッジ表示） */
-.card-brands {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 12px 14px;
-  padding: 0;
-  margin: 0;
-}
-.card-brands li {
-  font-family: "Cormorant Garamond", var(--sans-jp), sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  color: var(--ink);
-  background: #fff;
-  border: 1px solid var(--line-soft);
-  border-radius: 6px;
-  padding: 10px 16px;
-  min-width: 70px;
-  text-align: center;
 }
 @media (max-width: 560px) {
   .cause-box {
@@ -1370,6 +1348,9 @@ body {
   .voice-card p {
     font-size: 12px !important;
   }
+  .cause-list li {
+    font-size: 14px;
+  }
   .menu-table .mn {
     font-size: 14px;
   }
@@ -1432,18 +1413,14 @@ body {
   }
 }
 
-/* 全体：SPでは p の最大サイズを14pxにキャップ（それ以外は不変） */
+.sp-br {
+  display: none;
+}
+/* SP（768px以下）：本文14px上限・sec-head見出し・lead12px・SP専用改行 */
 @media (max-width: 768px) {
   p {
     font-size: 14px !important;
   }
-}
-
-/* SP個別調整：sec-head見出し24px・leadは12px・SP専用改行 */
-.sp-br {
-  display: none;
-}
-@media (max-width: 768px) {
   .sec-head .ttl {
     font-size: 20px;
   }

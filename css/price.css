@@ -12,27 +12,6 @@
   margin-right: 10px;
   vertical-align: middle;
 }
-.price-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 50px;
-}
-.price-nav a {
-  font-family: var(--sans-jp);
-  font-size: 13px;
-  letter-spacing: 0.06em;
-  color: var(--green-dk);
-  border: 1px solid var(--green);
-  border-radius: 24px;
-  padding: 9px 20px;
-  transition: 0.3s;
-}
-.price-nav a:hover {
-  background: var(--green);
-  color: #fff;
-}
 .pcat {
   margin-bottom: 100px;
   scroll-margin-top: 90px;

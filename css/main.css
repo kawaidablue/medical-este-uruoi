@@ -326,14 +326,14 @@ p {
     display: none;
   }
 }
-/* メニュー内 予約CTA */
+/* メニュー内 予約CTA（PCは左揃え、SPは中央＝下の768pxで上書き） */
 .nav-side .nav-cta {
   display: flex;
   flex-direction: column;
   gap: 10px;
   width: 100%;
   max-width: 300px;
-  margin: 20px auto 0;
+  margin: 20px 0 0;
 }
 .nav-side .nav-cta .btn {
   width: 100%;
@@ -529,22 +529,22 @@ p {
   }
 }
 .logo-img {
-  height: 54px;
+  height: 70px;
   width: auto;
   display: block;
 }
 .foot-logo {
-  height: 40px;
+  height: 52px;
   margin-bottom: 12px;
 }
 @media (max-width: 560px) {
   .logo-img {
-    height: 40px;
+    height: 52px;
   }
 }
 @media (max-width: 400px) {
   .logo-img {
-    height: 35px;
+    height: 46px;
   }
 }
 /* メニュー11項目化に伴うスタッガー（9〜11） */
@@ -754,13 +754,10 @@ p {
     font-size: 11px;
   }
 }
-/* SP：コピーライト10px */
+/* SP：コピーライト10px・ハンバーガー3本線・閉じる×を小さく */
 @media (max-width: 768px) {
-.foot-bottom { font-size: 10px !important; }
-}
-/* SP：ハンバーガー3本線・閉じる×を小さく */
-@media (max-width: 768px) {
-.burger .circle { gap: 5px; }
-.burger .circle i { width: 26px; }
-.nav-overlay .close { font-size: 26px; }
+  .foot-bottom { font-size: 10px !important; }
+  .burger .circle { gap: 5px; }
+  .burger .circle i { width: 26px; }
+  .nav-overlay .close { font-size: 26px; }
 }

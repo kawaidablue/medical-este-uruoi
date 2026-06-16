@@ -1682,29 +1682,17 @@ footer {
   }
 }
 
-/* 全体：SPでは p の最大サイズを14pxにキャップ（それ以外は不変） */
+/* SP（768px以下）共通の微調整：本文14px上限・lead12px・info-list12px・ごあいさつ透かし位置 */
 @media (max-width: 768px) {
   p {
     font-size: 14px !important;
   }
-}
-
-/* SP：lead は12px */
-@media (max-width: 768px) {
   .lead {
     font-size: 12px !important;
   }
-}
-
-/* SP：アクセスの情報divは12px */
-@media (max-width: 768px) {
   .info-list {
     font-size: 12px;
   }
-}
-
-/* SP：ごあいさつ透かしの位置を下げる */
-@media (max-width: 768px) {
   .greet .wm {
     top: 80px;
   }

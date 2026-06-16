@@ -337,10 +337,11 @@ body {
 .voice-card p {
   font-size: 15px;
   line-height: 2.05;
+  margin: 0 0 24px;
 }
 .voice-card .meta {
   margin-top: auto;
-  padding-top: 16px;
+  padding-top: 22px;
   border-top: 1px solid var(--line-soft);
   font-family: var(--sans-jp);
   font-size: 12px;

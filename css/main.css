@@ -248,9 +248,9 @@ p {
   align-self: center;
 }
 .nav-side .nav-logo {
-  height: 50px;
+  height: 84px;
   width: auto;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 .nav-side .nav-concept {
   font-family: var(--serif-jp);
@@ -534,7 +534,7 @@ p {
   display: block;
 }
 .foot-logo {
-  height: 52px;
+  height: 68px;
   margin-bottom: 12px;
 }
 @media (max-width: 560px) {

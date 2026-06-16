@@ -11,6 +11,8 @@
   padding: 34px 36px;
   box-shadow: var(--shadow-sm);
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .voice-card .quote {
   font-family: var(--serif-en);
@@ -34,10 +36,11 @@
 .voice-card p {
   font-size: 15px;
   line-height: 2.05;
+  margin: 0 0 24px;
 }
 .voice-card .meta {
-  margin-top: 20px;
-  padding-top: 16px;
+  margin-top: auto;
+  padding-top: 22px;
   border-top: 1px solid var(--line-soft);
   font-family: var(--sans-jp);
   font-size: 12px;

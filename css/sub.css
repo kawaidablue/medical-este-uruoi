@@ -1244,6 +1244,18 @@ body {
   padding: 7px 0 7px 22px;
   font-size: 14px;
 }
+@media (max-width: 768px) {
+  .notice-col p {
+    font-size: 12px;
+  }
+  .notice-col .bullets li {
+    font-size: 12px;
+    padding: 4px 0 4px 22px;
+  }
+  .notice-col .bullets li::before {
+    top: 13.3px;
+  }
+}
 .case-frame {
   max-width: none;
 }

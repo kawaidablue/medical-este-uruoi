@@ -156,5 +156,33 @@
   <p class="foot-bottom">Copyright (C) メディカルエステうるおい All Rights Reserved.</p>
 </footer>
 <script src="js/app.js?v=122"></script>
+<script>
+  // お客様の声：各カードを抜粋表示し「続きを読む」で全文展開
+  (function () {
+    var cards = document.querySelectorAll('.voice-card');
+    for (var i = 0; i < cards.length; i++) {
+      (function (card) {
+        var p = card.querySelector('p');
+        if (!p) return;
+        p.classList.add('is-clamp');
+        // 省略が発生しない短文はそのまま表示
+        if (p.scrollHeight - p.clientHeight < 6) {
+          p.classList.remove('is-clamp');
+          return;
+        }
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'more';
+        btn.textContent = '続きを読む';
+        p.parentNode.insertBefore(btn, p.nextSibling);
+        btn.addEventListener('click', function () {
+          var clamped = p.classList.toggle('is-clamp');
+          btn.textContent = clamped ? '続きを読む' : '閉じる';
+          btn.classList.toggle('is-open', !clamped);
+        });
+      })(cards[i]);
+    }
+  })();
+</script>
 </body>
 </html>

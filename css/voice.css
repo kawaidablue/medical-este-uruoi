@@ -38,6 +38,42 @@
   line-height: 2.05;
   margin: 0 0 24px;
 }
+/* 省略表示（JSで付与）＋「続きを読む」 */
+.voice-card p.is-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+.voice-card .more {
+  align-self: flex-start;
+  margin: 0 0 22px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--sans-jp);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: var(--green-dk);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: opacity 0.2s ease;
+}
+.voice-card .more::after {
+  content: "＋";
+  font-size: 12px;
+  line-height: 1;
+}
+.voice-card .more.is-open::after {
+  content: "−";
+}
+.voice-card .more:hover {
+  opacity: 0.65;
+}
 .voice-card .meta {
   margin-top: auto;
   padding-top: 22px;

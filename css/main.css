@@ -589,13 +589,16 @@ p {
   .foot-brand {
     grid-column: 1 / -1;
     text-align: center;
-    padding-bottom: 26px;
+    padding-bottom: 22px;
     border-bottom: 1px solid var(--beige-dk);
   }
   .foot-brand .foot-logo {
-    display: inline-block;
-    height: 46px;
-    margin-bottom: 12px;
+    display: block;
+    height: 66px;
+    margin: 0 auto 4px;
+  }
+  .foot-brand address {
+    margin-top: 6px;
   }
 }
 @media (max-width: 380px) {

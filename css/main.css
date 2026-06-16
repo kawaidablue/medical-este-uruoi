@@ -93,7 +93,9 @@ p {
 }
 @media (max-width: 400px) {
   .hd-cta {
-    display: none;
+    font-size: 9px;
+    letter-spacing: 0.04em;
+    padding: 8px 10px;
   }
 }
 
@@ -317,6 +319,25 @@ p {
   opacity: 0.45;
   pointer-events: none;
 }
+/* SP：Instagramはスマホで非表示（PCのみ表示） */
+@media (max-width: 768px) {
+  .nav-sns a[aria-label="Instagram"],
+  .rs-sns a[aria-label="Instagram"] {
+    display: none;
+  }
+}
+/* メニュー内 予約CTA */
+.nav-side .nav-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto 0;
+}
+.nav-side .nav-cta .btn {
+  width: 100%;
+}
 .nav-list {
   list-style: none;
 }
@@ -521,6 +542,11 @@ p {
     height: 40px;
   }
 }
+@media (max-width: 400px) {
+  .logo-img {
+    height: 35px;
+  }
+}
 /* メニュー11項目化に伴うスタッガー（9〜11） */
 .nav-overlay.open .nav-list li:nth-child(9) {
   transition-delay: 0.58s;
@@ -654,35 +680,58 @@ p {
     padding: 84px 24px 40px;
     align-content: start;
   }
-/* 連絡先は1行に集約（TEL左・SNS右。ロゴ/コンセプト/営業時間/住所は省略） */
+/* 連絡先：中央寄せの整った連絡ブロック（ラベル＋TEL＋受付時間＋SNS） */
   .nav-side {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 22px;
+    text-align: center;
+    gap: 4px;
+    padding-top: 26px;
+    margin-top: 8px;
+    border-top: 1px solid rgba(168, 149, 123, 0.3);
   }
-.nav-side .nav-logo,
+  .nav-side .nav-logo,
   .nav-side .nav-concept,
-  .nav-side .nav-addr,
-  .nav-side .nav-hours,
-  .nav-side .nav-tel-l {
+  .nav-side .nav-addr {
     display: none;
   }
-.nav-side .nav-tel {
-    font-size: 20px;
+  .nav-side .nav-tel-l {
+    display: block;
     margin: 0;
+    font-family: var(--serif-en);
+    font-style: italic;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    color: var(--taupe);
   }
-.nav-side .nav-sns {
-    margin-top: 0;
-    gap: 10px;
+  .nav-side .nav-tel {
+    font-family: var(--serif-jp);
+    font-size: clamp(24px, 7vw, 30px);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--green-dk);
+    margin: 2px 0 0;
   }
-.nav-side .nav-sns a {
-    width: 38px;
-    height: 38px;
+  .nav-side .nav-hours {
+    display: block;
+    margin: 4px 0 0;
+    font-size: 11.5px;
+    letter-spacing: 0.04em;
+    color: var(--taupe);
   }
-.nav-side .nav-sns a svg {
-    width: 19px;
-    height: 19px;
+  .nav-side .nav-sns {
+    margin-top: 14px;
+    gap: 12px;
+    justify-content: center;
+  }
+  .nav-side .nav-sns a {
+    width: 40px;
+    height: 40px;
+  }
+  .nav-side .nav-sns a svg {
+    width: 20px;
+    height: 20px;
   }
 /* メニュー項目は1行（jp左・en右）。読みやすさ優先で余白を確保 */
   .nav-list a {

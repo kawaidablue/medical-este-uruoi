@@ -948,6 +948,17 @@ body {
   color: var(--brown-soft);
   line-height: 1.8;
 }
+.sign-role .role-br {
+  display: none;
+}
+@media (max-width: 600px) {
+  .sign-role .role-sep {
+    display: none;
+  }
+  .sign-role .role-br {
+    display: inline;
+  }
+}
 .greet-sign .sign-name {
   font-family: var(--mincho);
   font-weight: 600;

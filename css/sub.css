@@ -512,7 +512,7 @@ body {
   border-bottom: 1px solid var(--line-soft);
 }
 .toc::before {
-  content: "目次 / Contents";
+  content: "Contents";
   flex-basis: 100%;
   text-align: center;
   font-family: var(--sans-jp);
@@ -1361,6 +1361,15 @@ body {
   .qaitem .a {
     font-size: 14px;
   }
+  .qaitem .q {
+    font-size: 15px;
+  }
+  h4 {
+    font-size: 16px;
+  }
+  .voice-card p {
+    font-size: 12px !important;
+  }
   .menu-table .mn {
     font-size: 14px;
   }
@@ -1407,6 +1416,9 @@ body {
   /* SP：初回トライアル価格カードは縦積み（横並びのカラム落ち防止） */
   .price-first {
     padding: 22px 18px;
+  }
+  .price-first .nm {
+    font-size: 15px;
   }
   .price-first .was2 {
     display: block;

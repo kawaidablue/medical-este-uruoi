@@ -510,7 +510,8 @@ body {
 
 .pickup {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
   align-items: center;
   position: relative;
 }
@@ -525,7 +526,7 @@ body {
 .pickup .pbody {
   position: relative;
   z-index: 2;
-  margin-left: -90px;
+  margin-left: 0;
   background: #fff;
   border-radius: 4px;
   box-shadow: var(--sh-card);
@@ -733,7 +734,7 @@ body {
 }
 .news .nrow {
   display: grid;
-  grid-template-columns: 116px 96px 1fr;
+  grid-template-columns: 116px 1fr;
   gap: 22px;
   align-items: center;
   padding: 22px 6px;

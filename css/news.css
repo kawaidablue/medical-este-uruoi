@@ -6,7 +6,7 @@
 }
 .nrow {
   display: grid;
-  grid-template-columns: 116px 96px 1fr;
+  grid-template-columns: 116px 1fr;
   gap: 22px;
   align-items: center;
   padding: 26px 6px;

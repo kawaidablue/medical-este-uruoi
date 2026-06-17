@@ -1397,6 +1397,9 @@ footer {
   gap: 13px;
   justify-content: center;
 }
+.rs-card .rs-act .btn {
+  justify-content: center;
+}
 .rs-lbl {
   font-size: 12.5px;
   letter-spacing: 0.08em;

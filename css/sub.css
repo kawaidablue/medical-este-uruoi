@@ -1259,6 +1259,139 @@ body {
 .case-frame {
   max-width: none;
 }
+/* お取り扱い製品：うるおいプラチナCEシリーズ ビジュアルバナー */
+.ce-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 0 0 44px;
+  padding: 44px 52px;
+  border-radius: 18px;
+  overflow: hidden;
+  background-color: #eef6fc;
+  background-image:
+    radial-gradient(circle at 86% 16%, rgba(120, 200, 240, 0.22), transparent 44%),
+    radial-gradient(circle at 8% 94%, rgba(150, 212, 246, 0.2), transparent 46%),
+    linear-gradient(118deg, #e4f1fb 0%, #f2faff 56%, #ffffff 100%);
+  border: 1px solid #d6e8f4;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+/* 装飾：光のにじみ（玉）と水紋リング */
+.ce-hero::before {
+  content: "";
+  position: absolute;
+  top: -70px;
+  right: -50px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(79, 177, 224, 0.2), rgba(79, 177, 224, 0));
+  z-index: 0;
+  pointer-events: none;
+}
+.ce-hero::after {
+  content: "";
+  position: absolute;
+  bottom: -64px;
+  left: 16%;
+  width: 168px;
+  height: 168px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(79, 177, 224, 0.22);
+  box-shadow: 0 0 0 14px rgba(79, 177, 224, 0.06);
+  z-index: 0;
+  pointer-events: none;
+}
+.ce-hero:hover {
+  box-shadow: 0 14px 34px rgba(47, 155, 214, 0.16);
+  transform: translateY(-3px);
+}
+.ce-hero-tx {
+  position: relative;
+  z-index: 1;
+  flex: 1 1 48%;
+  min-width: 0;
+}
+.ce-hero-badge {
+  display: inline-block;
+  font-family: var(--sans-jp);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: #2f9bd6;
+  background: #ffffff;
+  border: 1px solid #bfe0f1;
+  border-radius: 999px;
+  padding: 6px 16px;
+  margin-bottom: 16px;
+}
+.ce-hero-tt {
+  font-family: var(--serif-jp);
+  font-weight: 600;
+  font-size: clamp(21px, 2.4vw, 27px);
+  letter-spacing: 0.03em;
+  line-height: 1.4;
+  color: #2b3a44;
+  margin: 0 0 14px;
+  word-break: keep-all;
+}
+.ce-hero-tt .ce-ac {
+  color: #2f9bd6;
+}
+.ce-hero-desc {
+  font-size: 14.5px;
+  line-height: 2;
+  color: #4a5961;
+  margin: 0 0 24px;
+}
+.ce-hero-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--sans-jp);
+  font-size: 15.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #2f9bd6;
+}
+.ce-hero-more::after {
+  content: "›";
+  font-size: 20px;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+.ce-hero:hover .ce-hero-more::after {
+  transform: translateX(4px);
+}
+.ce-hero-img {
+  position: relative;
+  z-index: 1;
+  flex: 1 1 52%;
+  align-self: center;
+}
+.ce-hero-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+@media (max-width: 880px) {
+  .ce-hero {
+    flex-direction: column;
+    gap: 22px;
+    padding: 32px 30px;
+  }
+  .ce-hero-img {
+    order: -1;
+  }
+  .ce-hero-tx {
+    width: 100%;
+    flex-basis: auto;
+  }
+}
 @media (max-width: 860px) {
   .notice-card {
     grid-template-columns: 1fr;

@@ -1326,6 +1326,23 @@ footer {
     margin-left: 0;
     margin-top: 0;
   }
+  /* info-card 内テキストをSPで0.5px小さく */
+  .info-card .timetable th,
+  .info-card .timetable td {
+    font-size: 12.5px;
+  }
+  .info-card .timetable .rh {
+    font-size: 12px;
+  }
+  .info-card .timetable .dot {
+    font-size: 13.5px;
+  }
+  .info-card .info-list {
+    font-size: 14.5px;
+  }
+  .info-card .info-list b {
+    font-size: 12.5px;
+  }
 }
 
 .reserve {

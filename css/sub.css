@@ -290,6 +290,11 @@ body {
   line-height: 1.6;
   margin-bottom: 20px;
 }
+@media (max-width: 360px) {
+  .split .txt h3 {
+    font-size: 18px;
+  }
+}
 .split .txt p {
   font-size: 16px;
   line-height: 2.2;
@@ -431,6 +436,14 @@ body {
   letter-spacing: 0.1em;
   margin-bottom: 28px;
   line-height: 1.7;
+}
+/* 狭幅でCTAボタンが折り返さないよう字間・余白を詰める（文字サイズは維持） */
+@media (max-width: 420px) {
+  .cta-banner .btn {
+    padding: 15px 22px;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
 }
 .reserve {
   position: relative;
@@ -1434,11 +1447,23 @@ body {
   .ce-hero {
     padding: 18px 16px;
   }
+  .ce-hero-badge {
+    font-size: 8px;
+    padding: 4px 11px;
+    margin-bottom: 8px;
+  }
   .ce-hero-tt {
-    font-size: 14.5px;
+    font-size: 19px;
   }
   .ce-hero-more {
     font-size: 11px;
+  }
+}
+/* キャンセルポリシー：遅刻リストをSPで小さく */
+@media (max-width: 768px) {
+  .cp-list li {
+    font-size: 13px;
+    line-height: 1.8;
   }
 }
 @media (max-width: 860px) {

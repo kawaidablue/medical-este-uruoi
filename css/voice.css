@@ -104,4 +104,17 @@
   .voice-grid {
     grid-template-columns: 1fr;
   }
+  /* SP：人物が右下にいるため右下に寄せて表示＋ベールを薄く */
+  .page-hero .hero-art .ph {
+    -o-object-position: right bottom;
+    object-position: right bottom;
+  }
+  .page-hero .hero-veil {
+    background: linear-gradient(
+      180deg,
+      rgba(245, 240, 230, 0.22) 0%,
+      rgba(245, 240, 230, 0.14) 42%,
+      rgba(238, 231, 213, 0.5) 100%
+    );
+  }
 }

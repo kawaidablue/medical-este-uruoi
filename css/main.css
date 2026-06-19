@@ -328,6 +328,24 @@ p {
     display: inline;
   }
 }
+/* 360px以下専用改行 */
+.xs-br {
+  display: none;
+}
+@media (max-width: 360px) {
+  .xs-br {
+    display: inline;
+  }
+}
+/* 400px以下専用改行 */
+.br400 {
+  display: none;
+}
+@media (max-width: 400px) {
+  .br400 {
+    display: inline;
+  }
+}
 /* SP：Instagramはスマホで非表示（PCのみ表示） */
 @media (max-width: 768px) {
   .nav-sns a[aria-label="Instagram"],
@@ -770,7 +788,7 @@ p {
 /* SP：コピーライト10px・ハンバーガー3本線・閉じる×を小さく */
 @media (max-width: 768px) {
   .foot-bottom { font-size: 10px !important; }
-  .burger .circle { gap: 5px; }
-  .burger .circle i { width: 26px; }
+  .burger .circle { gap: 6px; }
+  .burger .circle i { width: 30px; }
   .nav-overlay .close { font-size: 26px; }
 }

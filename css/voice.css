@@ -104,17 +104,28 @@
   .voice-grid {
     grid-template-columns: 1fr;
   }
-  /* SP：人物が右下にいるため右下に寄せて表示＋ベールを薄く */
+  /* SP：トップ写真は非表示（背景グラデのみ） */
   .page-hero .hero-art .ph {
-    -o-object-position: right bottom;
-    object-position: right bottom;
+    display: none;
   }
-  .page-hero .hero-veil {
-    background: linear-gradient(
-      180deg,
-      rgba(245, 240, 230, 0.22) 0%,
-      rgba(245, 240, 230, 0.14) 42%,
-      rgba(238, 231, 213, 0.5) 100%
-    );
-  }
+}
+/* お客様の声：SP「もっと見る」ボタン（JSで生成） */
+.voice-more {
+  display: block;
+  margin: 26px auto 0;
+  padding: 13px 34px;
+  background: var(--white);
+  border: 1px solid var(--green);
+  border-radius: 999px;
+  color: var(--green-dk);
+  font-family: var(--sans-jp);
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.voice-more:hover {
+  background: var(--green);
+  color: var(--white);
 }

@@ -1338,10 +1338,24 @@ footer {
     font-size: 13.5px;
   }
   .info-card .info-list {
-    font-size: 14.5px;
+    font-size: 12px;
   }
   .info-card .info-list b {
-    font-size: 12.5px;
+    font-size: 11px;
+  }
+}
+/* 400px以下：営業時間テーブルを10pxに */
+@media (max-width: 400px) {
+  .info-card .timetable th,
+  .info-card .timetable td {
+    font-size: 10px;
+    padding: 8px 2px;
+  }
+  .info-card .timetable .rh {
+    font-size: 10px;
+  }
+  .info-card .timetable .dot {
+    font-size: 11px;
   }
 }
 

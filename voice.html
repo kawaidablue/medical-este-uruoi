@@ -184,6 +184,51 @@
       })(cards[i]);
     }
   })();
+
+  // お客様の声：SP（≤768px）のみ各カテゴリ5件ずつ表示＋「もっと見る」
+  (function () {
+    var STEP = 5;
+    var mq = window.matchMedia('(max-width: 768px)');
+    var grids = document.querySelectorAll('.voice-grid');
+    var setups = [];
+    function teardown() {
+      for (var i = 0; i < setups.length; i++) {
+        var s = setups[i];
+        for (var j = 0; j < s.cards.length; j++) s.cards[j].style.display = '';
+        if (s.btn && s.btn.parentNode) s.btn.parentNode.removeChild(s.btn);
+      }
+      setups = [];
+    }
+    function build() {
+      teardown();
+      if (!mq.matches) return;
+      for (var i = 0; i < grids.length; i++) {
+        (function (grid) {
+          var cards = grid.querySelectorAll('.voice-card');
+          if (cards.length <= STEP) return;
+          var shown = STEP;
+          for (var j = STEP; j < cards.length; j++) cards[j].style.display = 'none';
+          var btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'voice-more';
+          btn.textContent = 'もっと見る';
+          grid.parentNode.insertBefore(btn, grid.nextSibling);
+          btn.addEventListener('click', function () {
+            var next = shown + STEP;
+            for (var k = shown; k < next && k < cards.length; k++) cards[k].style.display = '';
+            shown = next;
+            if (shown >= cards.length) {
+              btn.style.display = 'none';
+            }
+          });
+          setups.push({ cards: cards, btn: btn });
+        })(grids[i]);
+      }
+    }
+    build();
+    if (mq.addEventListener) mq.addEventListener('change', build);
+    else if (mq.addListener) mq.addListener(build);
+  })();
 </script>
 </body>
 </html>

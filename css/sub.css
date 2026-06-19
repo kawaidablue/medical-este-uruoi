@@ -1659,7 +1659,7 @@ body {
 }
 
 /* SP極小（380px以下）：関連カードは1列 */
-@media (max-width: 380px) {
+@media (max-width: 400px) {
   .feature-grid,
   .related-grid {
     grid-template-columns: 1fr;

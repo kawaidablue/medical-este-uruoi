@@ -58,7 +58,7 @@
   height: auto;
   display: block;
 }
-@media (max-width: 768px) {
+@media (max-width: 680px) {
   .pay-card {
     flex-direction: column;
     gap: 26px;
@@ -66,13 +66,60 @@
   }
   .pay-info {
     flex: none;
+    width: 100%;
+    text-align: center;
+  }
+  .pay-h {
+    font-size: 20px;
+  }
+  .pay-lead {
+    font-size: 12.5px !important;
+    line-height: 1.85;
+    text-align: center;
+  }
+  .pay-note {
+    font-size: 11px !important;
+    line-height: 1.75;
     text-align: center;
   }
   .pay-logos {
     flex: none;
+    width: 70%;
+    max-width: 70%;
+    margin: 0 auto;
+  }
+}
+/* 540px以下：ロゴをSP幅（100%）に */
+@media (max-width: 540px) {
+  .pay-logos {
     width: 100%;
     max-width: 100%;
-    margin: 0 auto;
+  }
+}
+/* 2カラムの狭い範囲（681〜768px）：テキスト6.5 : 画像3.5＋文字をclampで縮小 */
+@media (min-width: 681px) and (max-width: 768px) {
+  .pay-card {
+    gap: 28px;
+  }
+  .pay-info {
+    flex: 6.5 1 0;
+    min-width: 0;
+  }
+  .pay-logos {
+    flex: 3.5 1 0;
+    max-width: none;
+  }
+  .pay-h {
+    /* 601px→17px, 768px→20px */
+    font-size: clamp(17px, 6.2px + 1.8vw, 20px);
+  }
+  .pay-lead {
+    /* 601px→11px, 768px→13px */
+    font-size: clamp(11px, 3.8px + 1.2vw, 13px) !important;
+  }
+  .pay-note {
+    /* 601px→9px, 768px→11px */
+    font-size: clamp(9px, 1.8px + 1.2vw, 11px) !important;
   }
 }
 .pl-tag {

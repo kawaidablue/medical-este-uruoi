@@ -507,6 +507,22 @@ body {
   font-size: 11px;
   color: var(--brown-soft);
 }
+/* 400px以下：価格行（税込）が折り返さないよう1行固定＋縮小 */
+@media (max-width: 400px) {
+  .cban .info .pr {
+    white-space: nowrap;
+  }
+  .cban .info .pr .was {
+    font-size: 9.5px;
+    margin-right: 4px;
+  }
+  .cban .info .pr .now {
+    font-size: 20px;
+  }
+  .cban .info .pr .note {
+    font-size: 9px;
+  }
+}
 
 .pickup {
   display: grid;

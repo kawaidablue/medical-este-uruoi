@@ -1,0 +1,56 @@
+/* ===== treatment-nikibi.css : treatment-nikibi.html 固有スタイル（共通は sub.css）===== */
+.topic + .topic {margin-top: 46px;}
+.topic-h {font-family: var(--serif-jp);
+  font-weight: 600;
+  font-size: 21px;
+  color: var(--ink);
+  letter-spacing: 0.06em;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 20px;}
+.topic-part + .topic-part {margin-top: 18px;}
+.topic-part h4 {font-family: var(--serif-jp);
+  font-weight: 600;
+  font-size: 15.5px;
+  color: var(--green-dk);
+  letter-spacing: 0.03em;
+  margin-bottom: 6px;}
+.topic-part p {font-size: 15.5px;
+  color: var(--ink-soft);
+  line-height: 1.95;}
+.type-row.text-only {grid-template-columns: 1fr;
+  gap: 0;
+  padding: 24px 2px 24px 22px;
+  position: relative;}
+.type-row.text-only::before {content: "";
+  position: absolute;
+  left: 0;
+  top: 30px;
+  bottom: 30px;
+  width: 3px;
+  border-radius: 2px;
+  background: var(--green);
+  opacity: 0.6;}
+
+/* 施術内容の写真（横長の水素水ピーリング写真用）*/
+.media.wide { aspect-ratio: 16 / 11; }
+
+
+/* 治療ページはヒーロー写真を表示（teatment_top） */
+.page-hero .hero-art .ph { display: block; }
+
+/* ヒーローのveilを少しだけ弱める（画像を見せる） */
+.page-hero .hero-veil {
+  background: linear-gradient(
+    180deg,
+    rgba(245, 240, 230, 0.34) 0%,
+    rgba(245, 240, 230, 0.22) 42%,
+    rgba(238, 231, 213, 0.60) 100%
+  );
+}
+
+/* SP: 15.5px → 14px */
+@media (max-width: 768px) {
+  .topic-part h4 { font-size: 14px; }
+  .topic-part p { font-size: 14px; }
+}

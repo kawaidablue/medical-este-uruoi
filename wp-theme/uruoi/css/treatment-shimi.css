@@ -1,0 +1,77 @@
+/* ===== treatment-shimi.css : treatment-shimi.html 固有スタイル（共通は sub.css）===== */
+.linkrow a {
+  color: var(--green-dk);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-size: 15px;
+}
+/* SP：リンク12px・シミの種類見出し16px */
+@media (max-width: 768px) {
+  .linkrow a {
+    font-size: 12px;
+  }
+  .type-row h4 {
+    font-size: 16px;
+  }
+}
+.type-photo {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 66 / 97;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.type-photo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -webkit-filter: none;
+  filter: none;
+}
+.type-photo::after {
+  content: none;
+}
+.skin-fig {
+  max-width: 960px;
+  margin: 0 auto;
+  background: var(--white);
+  border: 1px solid var(--line-soft);
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+}
+.skin-fig img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+.skin-fig figcaption {
+  margin-top: 12px;
+  text-align: right;
+  font-family: var(--sans-jp);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--taupe);
+}
+
+/* 施術内容の写真（横長のメソアクティス写真用）*/
+.media.wide {
+  aspect-ratio: 16 / 11;
+}
+
+
+/* 治療ページはヒーロー写真を表示（teatment_top） */
+.page-hero .hero-art .ph { display: block; }
+
+/* ヒーローのveilを少しだけ弱める（画像を見せる） */
+.page-hero .hero-veil {
+  background: linear-gradient(
+    180deg,
+    rgba(245, 240, 230, 0.34) 0%,
+    rgba(245, 240, 230, 0.22) 42%,
+    rgba(238, 231, 213, 0.60) 100%
+  );
+}

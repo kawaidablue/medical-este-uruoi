@@ -1,0 +1,12 @@
+/*
+Theme Name: メディカルエステうるおい
+Theme URI: https://medical-este-uruoi.com/
+Description: メディカルエステうるおい 公式サイト用テーマ。お知らせ（投稿）を管理画面から編集できます。実スタイルは /css 配下に分割（main / top / sub ＋ ページ別）。
+Author: N-Bridge
+Version: 1.0
+Requires at least: 6.0
+Tested up to: 6.7
+Requires PHP: 7.4
+*/
+
+/* 実際のスタイルは css/ 配下を functions.php で読み込んでいます。 */

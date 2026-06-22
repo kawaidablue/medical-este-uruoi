@@ -1,0 +1,164 @@
+/* ===== cosmetics.css : cosmetics.html 固有スタイル（共通は sub.css）===== */
+.media.wide {aspect-ratio: 16/11;}
+.btn-green {background: var(--white);
+  border: 1px solid var(--green);
+  color: var(--green-dk);}
+.btn-green:hover {background: var(--green);
+  color: var(--white);}
+.product-grid {display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;}
+.product-card {background: var(--white);
+  border: 1px solid var(--line-soft);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);}
+.product-card:hover {transform: translateY(-6px);
+  box-shadow: var(--shadow);}
+.product-card .media {border-radius: 0;
+  position: relative;
+  overflow: hidden;}
+.product-card .media .ph {transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);}
+.product-card:hover .media .ph {transform: scale(1.05);}
+.product-card .pc-tag {position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 4;
+  font-family: var(--sans-jp);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #fff;
+  background: var(--green-dk);
+  border-radius: 20px;
+  padding: 5px 12px;
+  box-shadow: 0 6px 16px -8px rgba(74, 64, 52, 0.5);}
+.product-card .pc-body {padding: 22px 24px 26px;}
+.product-card .pc-body .en {font-family: var(--serif-en);
+  font-style: italic;
+  color: var(--green);
+  font-size: 15px;}
+.product-card .pc-body h4 {font-family: var(--serif-jp);
+  font-weight: 600;
+  color: var(--ink);
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  margin: 0 0 8px;
+  line-height: 1.5;}
+.product-card .pc-body p {font-size: 14.5px;
+  line-height: 1.95;
+  color: var(--ink-soft);}
+.brand-head {display: flex;
+  align-items: baseline;
+  gap: 12px;
+  font-family: var(--serif-jp);
+  font-weight: 600;
+  font-size: 23px;
+  color: var(--ink);
+  letter-spacing: 0.04em;
+  margin-bottom: 14px;}
+.brand-head::before {content: "";
+  align-self: center;
+  width: 4px;
+  height: 24px;
+  background: var(--green);
+  border-radius: 2px;}
+.brand-head .en {font-family: var(--serif-en);
+  font-style: italic;
+  font-size: 15px;
+  color: var(--green-dk);
+  font-weight: 500;}
+.brand-intro {font-size: 16px;
+  color: var(--ink-soft);
+  line-height: 1.95;
+  margin-bottom: 30px;}
+.produce-head {text-align: center;
+  margin: 10px 0 38px;}
+.produce-head .ph-script {font-family: "Parisienne", cursive;
+  font-size: 27px;
+  color: var(--green-dk);
+  line-height: 1;
+  display: block;
+  margin-bottom: 10px;}
+.produce-head .ph-title {font-family: var(--serif-jp);
+  font-weight: 600;
+  font-size: 21px;
+  color: var(--ink);
+  letter-spacing: 0.1em;
+  line-height: 1.55;}
+.produce-head .ph-rule {display: block;
+  width: 46px;
+  height: 2px;
+  background: var(--green);
+  border-radius: 2px;
+  margin: 18px auto 0;}
+@media (max-width: 600px) {
+  .produce-head .ph-title {font-size: 18px;}
+}
+.shop-link {margin-top: 26px;
+  text-align: center;}
+.product-card .pc-sub {display: block;
+  font-size: 12px;
+  color: var(--taupe);
+  margin-top: 3px;
+  letter-spacing: 0.04em;
+  font-weight: 400;}
+.product-card .pc-price {font-family: var(--serif-jp);
+  font-weight: 500;
+  font-size: 25px;
+  color: var(--green-dk);
+  margin: 9px 0 10px;}
+.product-card .pc-price small {font-family: var(--sans-jp);
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin-left: 7px;}
+.product-card .pc-rating {font-size: 12px;
+  color: var(--taupe);
+  margin: 4px 0 10px;
+  letter-spacing: 0.02em;}
+.product-card .pc-rating .stars {color: var(--green);
+  font-size: 13px;}
+.pc-2price .pc-pr {display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 7px;}
+.pc-2price .lbl {font-size: 10.5px;
+  background: var(--green-bg);
+  color: var(--green-dk);
+  border-radius: 5px;
+  padding: 4px 9px;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  font-weight: 600;}
+.pc-2price .amt {font-family: var(--serif-jp);
+  font-weight: 500;
+  font-size: 24px;
+  color: var(--green-dk);
+  line-height: 1;}
+.pc-2price .single .lbl {background: var(--line-soft);
+  color: var(--ink-soft);}
+.pc-2price .amt2 {font-family: var(--serif-jp);
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--ink-soft);
+  line-height: 1;}
+@media (max-width: 860px) {
+  .product-grid {grid-template-columns: 1fr 1fr;}
+}
+@media (max-width: 560px) {
+  .product-grid {grid-template-columns: 1fr;}
+}
+.product-card .pc-body .en {font-size: 18px;}
+
+/* productsヒーロー：写真を表示＋白の横グラデフィルター（左=白 → 右=透明） */
+.page-hero .hero-art .ph { display: block; }
+.page-hero .hero-veil {
+  display: block;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.45) 0%,
+    rgba(255, 255, 255, 0.18) 48%,
+    rgba(255, 255, 255, 0) 85%
+  );
+}
